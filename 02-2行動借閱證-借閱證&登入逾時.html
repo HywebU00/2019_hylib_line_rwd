@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="robots" content="noindex">
+	<!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+	<title>02-1 行動借閱證-借閱證&登入逾時</title>
+	<link rel="shortcut icon" href="images/favacon.ico"/>
+	<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/hylib-line-style.css">
+</head>
+<body>
+	<!-- 切換借閱證 -->
+	<div class="dialog" id="id-dialog">
+		<h2 class="dialog-title">切換借閱證</h2>
+		<div class="menber-list">
+			<ul>
+				<li class="active">
+					<span class="menber-name">張*大</span>
+					<span class="menber-id">A222***222</span>
+				</li>
+				<li>
+					<span class="menber-name">張*大</span>
+					<span class="menber-id">A222***222</span>
+				</li>
+			</ul>
+		</div>
+		<div class="btn btn-all btn-gray dialog-close">關閉</div>
+	</div>
+	<!-- 登入逾時 -->
+	<div class="dialog" id="timeout">
+		<h2 class="dialog-title">登入逾時</h2>
+		<p>您閒置過久<br>為了確保您的資料安全<br>已自動登出</p>
+		<div class="btn btn-all btn-orange">重新開啟</div>
+	</div>
+	<!-- overlay 黑色遮罩 -->
+	<div class='overlay'></div>
+	<div class="wrap">
+		<header>
+			<h1 class="logo"><a href=""></a></h1>
+			<div class="nav-function">
+				<span class="switch-menber"></span>
+			</div>
+		</header>
+		<div class="content mobile-card">
+			<div class="card-barcode">
+				<div class="barcode-refresh">01:59<a href="" class="btn btn-orange">重新計時</a></div>
+				<div class="menber-info">
+					<span class="menber-name">張*大</span><span class="menber-id">A222***222</span>
+				</div>
+				<div class="barcode-date">2018/02/25</div>
+				<div class="barcode">
+					<img src="images/barcode.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.1.12.4.min.js"></script>
+	<script src="js/slick/slick.js"></script>
+	<script src="js/hylib.js"></script>
+</body>
+</html>

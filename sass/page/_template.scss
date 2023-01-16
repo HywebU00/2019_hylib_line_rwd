@@ -1,0 +1,1189 @@
+body{
+    background: $bg-color;
+    position: relative;
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    &:after{
+        content: "";
+        width: 194px;
+        height: 259px;
+        display: block;
+        background: url(../images/bgicon.png) right top no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+    .overlay{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 998;
+    }
+}
+.select{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background:#fafafa url(../images/select-arrow.png) right center no-repeat;
+    border: 0px;
+    padding: 10px 35px 10px 10px;
+    border-radius: 20px;
+    font-size: 1.05em;
+    @media screen and (max-width: 320px) {
+        font-size: 1em;
+        background:#fafafa url(../images/select-arrow-s.png) right center no-repeat;
+    }
+}
+.input{
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-size: 1.05em;
+    border: 0px;
+    box-sizing:border-box;
+    box-shadow: 1px 2px 2px rgba(0,0,0,.3) inset;
+    @media screen and (max-width: 320px) {
+        font-size: 1em;
+    }
+    &.input-all{
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
+select::-ms-expand { 
+  display: none; 
+}
+.wrap  {
+    position: relative;
+    &.blur{
+        -webkit-filter: blur(10px);
+        filter: blur(10px);
+    }
+}
+.content{
+    padding:10px 15px;
+    position: relative;
+    &.mobile-card{
+        padding: 0 20px 10px;
+    }
+}
+//藍底
+.mobile-card{
+    .main-title{
+        color: #fff;
+        font-size: 1.8em;
+        font-weight: normal;
+        padding: 7px 0 0 16px;
+        margin: 0 0 10px 0;
+        position: relative;
+        @media screen and (max-device-width: 320px) {
+            font-size: 1.5em;
+        }
+        span{
+            font-size: 1rem;
+            display: block;
+            margin-top: 14px;
+            @media screen and (max-device-width: 320px) {
+                font-size: .85rem;
+                margin-top: 10px;
+            }
+        }
+        &:before{
+            content: "";
+            width: 6px;
+            height: 56px;
+            display: block;
+            border-radius: 5px;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @media screen and (max-device-width: 320px) {
+                height: 54px;
+            }
+        }
+    }
+    .card-step{
+        display: block;
+        margin:25px 0 20px 0;
+        letter-spacing: .03em;
+        @media screen and (max-device-width: 320px) {
+            margin:10px 0 10px 0;
+        }
+        span{
+            color: #fff;
+            font-size: 1.1em;
+            padding: 10px 18px;
+            border-radius: 20px;
+            box-sizing:border-box;
+            background: $grayColor;
+            vertical-align: middle;
+            display: inline-block;
+            @media screen and (max-device-width: 375px) {
+                font-size: .9em;
+                padding: 10px 10px;
+            }
+            @media screen and (max-device-width: 320px) {
+                margin-bottom: 8px;
+            }
+            &.active{
+                background: $secondaryColor;
+            }
+        }
+        em{
+            width: 16px;
+            height: 25px;
+            display: inline-block;
+            background: url(../images/white-arrow.png) 0 0 no-repeat;
+            background-size: cover;
+            vertical-align: middle;
+            @media screen and (max-device-width: 320px) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+    .card-consent{
+        border: 15px solid #fff;
+        padding: 5px;
+        height: 310px;
+        box-sizing:border-box;
+        background: #fff;
+        overflow-y: scroll;
+        margin-bottom: 20px;
+        @media screen and (max-device-width: 375px) {
+            height: 260px;
+        }
+        @media screen and (max-device-width: 320px) {
+            height: 200px;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        p{
+            margin-top: 0;
+            line-height: 160%;
+            color: $color-word;
+        }
+    }
+    .card-login{
+        padding: 25px 0 15px 0;
+        border-top: 2px solid #fff;
+        @media screen and (max-device-width: 320px) {
+            padding: 15px 0;
+        }
+        label{
+            color: #fff;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            display: block;
+            @media screen and (max-device-width: 320px) {
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+        }
+        input{
+            margin-bottom: 20px;
+            padding-right: 44px;
+            &.check{
+                background:#fff url(../images/check.png) right center no-repeat;
+            }
+            @media screen and (max-device-width: 320px) {
+                margin-bottom: 15px;
+            }
+        }
+        .id{
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            font-family: Arial,sans-serif;
+        }
+        .alert{
+            color: #fff;
+            background: red;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 1.1em;
+            @media screen and (max-device-width: 320px) {
+                font-size: 1em;
+                padding: 8px;
+            }
+        }
+    }
+    .card-ok{
+        text-align: center;
+        margin: 40px 0 30px 0;
+        @media screen and (max-device-width: 320px) {
+            margin: 15px 0 15px 0;
+        }
+        span{
+            font-size: 1.2em;
+            color: #fff;
+            display: block;
+            line-height: 160%;
+            letter-spacing: 1px;
+            @media screen and (max-device-width: 320px) {
+                font-size: 1.1em;
+                line-height: 140%;
+            }
+        }
+        &:before{
+            content: "";
+            width: 128px;
+            height: 128px;
+            display: block;
+            background: url(../images/check-big.png) 0 0 no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            margin:0 auto 20px auto;
+            @media screen and (max-device-width: 320px) {
+                width: 100px;
+                height: 100px;
+                margin:0 auto 10px auto;
+            }
+        }
+    }
+    .card-barcode{
+        padding: 20px;
+        text-align: center;
+        background: #fff;
+        border-radius: 5px;
+        // .title{
+        //     color: $primaryColor;
+        //     font-size: 1.8em;
+        //     font-weight: normal;
+        //     letter-spacing: .05em;
+        //     padding: 10px 0 0px 0;
+        //     margin-top: 10px;
+        //     @media screen and (max-device-width: 320px) {
+        //         font-size: 1.4em;
+        //         padding: 0;
+        //     }
+        // }
+        .menber-info{
+            font-size: 1.2em;
+            line-height: 160%;
+            letter-spacing: 1px;
+            font-weight: bold;
+            margin: 10px 0;
+            @media screen and (max-device-width: 320px) {
+                font-size: 1.1em;
+                line-height: 140%;
+            }
+            span{
+                display: block;
+            }
+        }
+        .barcode{
+            width: 100%;
+            max-width: 400px;
+            margin: 10px auto;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .barcode-date{
+            margin-bottom: 10px;
+            // @media screen and (max-device-width: 320px) {
+            //     margin-bottom: 10px;
+            // }
+        }
+        .barcode-refresh{
+            font-size: 1.8em;
+            color: $lightColor;
+            margin: 10px 10px 10px 0;
+            vertical-align: middle;
+            padding-left: 10px;
+            @media screen and (max-device-width: 320px) {
+                font-size: 1.5em;
+            }
+            .btn{
+                font-size: .6em;
+                margin-left: 10px;
+                margin-top: -5px;
+                padding: 8px 16px;
+                width: auto;
+                vertical-align: middle;
+                &:before{
+                    content: "";
+                    width: 24px;
+                    height: 24px;
+                    background: url(../images/refresh.png) 0 0 no-repeat;
+                    background-size: cover;
+                    display: inline-block;
+                    vertical-align: text-bottom;
+                    margin-right: 5px;
+                    @media screen and (max-device-width: 320px) {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+//白底
+.library{
+    background: #fafafa;
+    position: relative;
+    z-index: 99;
+    padding-top: 20px;
+    &.pb{
+        padding-bottom: 156px;
+    }
+    .main-title{
+        font-size: 1.6em;
+        color: $primaryColor;
+        position: relative;
+        padding-bottom: 12px;
+        letter-spacing: 1px;
+        font-weight: normal;
+        line-height: 110%;
+        margin-top: 0;
+        @media screen and (max-width: 320px) {
+            font-size: 1.4em;
+        }
+        &:before{
+            content: "";
+            width: 135px;
+            height: 6px;
+            display: block;
+            border-radius: 5px;
+            background: $primaryColor;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    .more{
+        width: 78px;
+        float: right;
+        margin-top: -62px;
+        @media screen and (max-width: 320px) {
+            margin-top: -55px;
+        }
+    }
+    .condition{
+        font-size: 1.1em;
+        margin-top: -5px;
+        margin-bottom: 15px;
+        @media screen and (max-width: 320px) {
+            font-size: 1em;
+        }
+        span{
+            margin-right: 8px;
+            em{
+                font-style: normal;
+                color: $lightColor;
+            }
+        }
+        .keyword{
+
+        }
+        .number{
+
+        }
+    }
+    .selection{
+        margin-bottom: 15px;
+    }
+    .select{
+        width: 49.5%;
+        max-width: 49.5%;
+        display: inline-block;
+        margin-right: -4px;
+        margin-left: 1%;
+        border: 3px solid $primaryColor;
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+
+    .input{
+        padding: 5px 18px;
+        border: 3px solid $primaryColor;
+    }
+    .slick-slider{
+        .slick-prev,.slick-next{
+            width: 23px;
+            height: 66px;
+            &:before{
+                display: none;
+            }
+        }
+        .slick-prev {
+            left: -10px;
+            background: url(../images/arrow-left.png) 0 0 no-repeat;
+            background-size: cover;
+        }
+        .slick-next {
+            right: -10px;
+            background: url(../images/arrow-right.png) 0 0 no-repeat;
+            background-size: cover;
+        }
+        .slick-list{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+    .empty{
+        width: 250px;
+        height: 210px;
+        background: url(../images/empty.png) right bottom no-repeat;
+        display: block;
+        margin: 60px auto;
+        text-align: center;
+        span{
+            font-size: 1.2em;
+            color: #a4a09e;
+            border-bottom: 2px dotted #a4a09e;
+        }
+    }
+}
+.book-slide{
+    .book{
+        overflow: hidden;
+        margin-bottom: 20px;
+        .cover,.title{
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            @media screen and (max-device-width: 375px) {
+                width: 125px;
+            }
+            @media screen and (max-device-width: 320px) {
+                width: 100px;
+            }
+        }
+        .cover{
+            height: 200px;
+            max-height: 200px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            @media screen and (max-device-width: 375px) {
+                height: 166px;
+                max-height: 166px;
+            }
+            @media screen and (max-device-width: 320px) {
+                height: 133px;
+                max-height: 133px;
+            }
+            img{
+                width: 150px;
+                height: auto;
+                @media screen and (max-device-width: 375px) {
+                    width: 125px;
+                }
+                @media screen and (max-device-width: 320px) {
+                    width: 100px;
+                }
+            }
+        }
+        .title{
+            line-height: 140%;
+            max-height: 44px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            word-break: break-word;
+        }
+    }
+}
+.book-list{
+}
+//書封在左 說明在右
+//03-2館藏查詢-查詢結果.html
+//03-3館藏查詢-書目資料.html
+//06-1個人書房-借閱.html
+//06-2個人書房-預約.html
+.book-info{
+    overflow: hidden;
+    margin-bottom: 20px;
+    .cover{
+        width: 150px;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin-right: 15px;
+        @media screen and (max-device-width: 375px) {
+            width: 125px;
+        }
+        @media screen and (max-device-width: 320px) {
+            width: 110px;
+        }
+        img{
+            width: 150px;
+            height: auto;
+            @media screen and (max-device-width: 375px) {
+                width: 125px;
+            }
+            @media screen and (max-device-width: 320px) {
+                width: 110px;
+            }
+        }
+    }
+    .info{
+        overflow: hidden;
+        .title{
+            line-height: 140%;
+            max-height: 44px;
+            overflow: hidden;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            word-break: break-word;
+            font-size: 1.1em;
+            color: $primaryColor;
+            @media screen and (max-device-width: 320px) {
+                font-size: 1.05em;
+            }
+            a{
+                color: $primaryColor;
+            }
+        }
+        dl{
+            color: $grayColor;
+            font-size: 1.05em;
+            line-height: 120%;
+            @media screen and (max-device-width: 320px) {
+                font-size: 1em;
+                margin-top: 8px;
+            }
+            dt{
+                float: left;
+                margin-bottom: 5px;
+            }
+            dd{
+                margin-bottom: 5px;
+                padding-left: 0;
+                margin-left: 0;
+                a{
+                    color: $lightColor;
+                    text-decoration: underline;
+                }
+            }
+            dt.borrow-day,dt.due-day,dt.reservation-day{
+                @media screen and (max-device-width: 320px) {
+                    float: none;
+                }
+            }
+            dt.borrow-day+dd,dt.due-day+dd,dt.reservation-day+dd{
+                @media screen and (max-device-width: 320px) {
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+            }
+            dt.due-day,dt.due-day+dd,dt.reservation-order,dt.reservation-order+dd{
+                color: $lightColor;
+            }
+            dt.waiting-day{
+                @media screen and (max-device-width: 450px) {
+                    float: none;
+                }
+            }
+        }
+        //03-3館藏查詢-書目資料.html
+        .isbn{
+            color: $secondaryColor;
+            font-size: .85em;
+            margin-bottom: 8px;
+            font-weight: bold;
+            letter-spacing: .5px;
+            margin-top: -5px;
+            &:before{
+                content: "ISBN";
+                margin-right: 10px;
+            }
+        }
+        .btn{
+            width: auto;
+            @media screen and (max-device-width: 320px) {
+                letter-spacing: 0;
+                font-size: 1em;
+            }
+        }
+        //06-2個人書房-預約.html
+        .reservation{
+            .number{
+                color: $grayColor;
+                font-size: 1.05em;
+                @media screen and (max-device-width: 320px) {
+                    font-size: 1em;
+                }
+            }
+        }
+        //續借
+        .renew{
+            margin-top: -8px;
+        }
+    }
+}
+.book-detail{
+}
+//03-3館藏查詢-書目資料.html
+.intro{
+    margin-bottom: 20px;
+    p{
+        font-size: 1.05em;
+        line-height: 140%;
+        color: $grayColor;
+    }
+    .more{
+        margin: 5px auto;
+        clear: both;
+        float: none;
+        display: inherit;
+    }
+    dl{
+        font-size: 1.05em;
+        line-height: 120%;
+        color: $grayColor;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 3px solid #e2e2e2;
+        dt{
+            float: left;
+            margin-bottom: 6px;
+        }
+        dd{
+            margin-bottom: 6px;
+            a{
+                color: $lightColor;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+//03-4館藏查詢-點擊預約.html
+//03-4館藏查詢-點擊預約-期刊.html
+//03-4館藏查詢-點擊預約-套書.html
+.reservation-detail{
+    div{
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 2px dotted #ccc;
+    }
+    label{
+        width: 110px;
+        display: inline-block;
+        @media screen and (max-device-width: 320px) {
+            margin-bottom: 8px;
+        }
+    }
+    .select{
+        width: auto;
+        padding: 10px 45px 10px 10px;
+        margin-left: 0;
+        @media screen and (max-device-width: 320px) {
+            width: 100%;
+            display: block;
+        }
+    }
+    .input{
+        padding: 5px;
+        @media screen and (max-device-width: 320px) {
+            width: 100%;
+            display: block;
+        }
+    }
+    .input[type="date"]{
+        appearance:none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        padding: 5px;
+        height: 42px;
+        min-width: 160px;
+        background:#fafafa url(../images/calendar.png) right center no-repeat;
+        @media screen and (max-device-width: 320px) {
+            width: 100%;
+            display: block;
+        }
+        &:focus{
+            background: #fafafa;
+        }
+    }
+}
+//新書  書本在上 文字在下
+//04-1新書.html
+//05-1主題書展.html
+//06-4個人書房-閱讀指數-月.html
+.book-gallery{
+    margin-left: -10px;
+    margin-right: -10px;
+    @media only screen and (min-device-width:480px){
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    @media only screen and (min-device-width:568px){
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    @media only screen and (min-device-width:640px){
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    @media only screen and (min-device-width:667px){
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    @media only screen and (min-device-width:853px){
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    @media only screen and (min-device-width:966px){
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .book{
+        overflow: hidden;
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-right: -5px;
+        vertical-align: top;
+        width: 50%;
+        padding: 0px 10px;
+        box-sizing:border-box;
+        @media only screen and (min-device-width:480px){
+            padding: 0px 15px;
+        }
+        @media only screen and (min-device-width:568px){
+            width: calc(100%/3);
+            padding: 0px 10px;
+        }
+        @media only screen and (min-device-width:640px){
+            padding: 0px 15px;
+        }
+        @media only screen and (min-device-width:768px){
+            width: 25%;
+            padding: 0px 10px;
+        }
+        @media only screen and (min-device-width:853px){
+            padding: 0px 15px;
+        }
+        @media only screen and (min-device-width:960px){
+            width: calc(100%/4);
+            padding: 0px 10px;
+        }
+        @media only screen and (min-device-width:1024px){
+            width: 20%;
+        }
+        @media only screen and (min-device-width:1200px){
+            width: calc(100%/6);
+        }
+        @media only screen and (min-device-width:1366px){
+            width: calc(100%/7);
+        }
+        @media only screen and (min-device-width:1700px){
+            width: calc(100%/8);
+        }
+        @media only screen and (min-device-width:1900px){
+            width: calc(100%/9);
+        }
+        @media only screen and (min-device-width:2250px){
+            width: 10%;
+        }
+        @media only screen and (min-device-width:2468px){
+            width: calc(100%/11);
+        }
+        &:nth-of-type(2n){
+            // margin-right: 0;
+            // @media screen and (max-width: 414px) {
+            //     margin-right: 0;
+            // }
+        }
+        &:nth-of-type(4n){
+            // @media screen and (max-width: 853px) {
+            //     margin-right: 0;
+            // }
+        }
+        .cover,.title{
+            // width: 150px;
+            width: 100%;
+        }
+        .cover{
+            height: auto;
+            overflow: hidden;
+            margin-bottom: 10px;
+            img{
+                // width: 150px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .title{
+            line-height: 140%;
+            max-height: 44px;
+            height: 44px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            word-break: break-word;
+            color: $primaryColor;
+            margin-bottom: 10px;
+            a{
+                color: $primaryColor;
+            }
+        }
+        dl{
+            margin: 0 0 10px 0;
+            color: $grayColor;
+            dt{
+                float: left;
+                margin-bottom: 6px;
+            }
+            dd{
+                margin-bottom: 6px;
+            }
+        }
+        .btn{
+        }
+    }
+}
+//06-3個人書房-借閱證管理.html
+.id-list{
+    font-size: 1.2em;
+    line-height: 160%;
+    margin-bottom: 15px;
+    @media screen and (max-width: 320px) {
+        font-size: 1em;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        display: block;
+        padding: 8px 0;
+        border-bottom: 2px dotted #ccc;
+        span{
+            margin-right: 8px;
+        }
+        span.delete-id{
+            float: right;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            background: url(../images/delete.png) 0 0 no-repeat;
+            background-size: cover;
+        }
+    }
+}
+//07-1圖書館消息.html
+.news-list{
+    font-size: 1.1em;
+    line-height: 140%;
+    margin-bottom: 15px;
+    @media screen and (max-device-width: 320px) {
+        font-size: 1em;
+    }
+    @media only screen and (min-device-width:1024px){
+        font-size: 1em;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        display: block;
+        padding: 8px 30px 8px 0;
+        border-bottom: 2px dotted #ccc;
+        background: url(../images/arrow-right-s.png) right center no-repeat;
+        .news-date{
+            color: $grayColor;
+        }
+        .news-title{
+            color: $primaryColor;
+            display: block;
+            line-height: 140%;
+            max-height: 54px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            word-break: break-word;
+            font-size: 1.1em;
+        }
+    }
+}
+//07-2圖書館消息-內文.html
+.news-detail{
+    .news-title{
+        font-size: 1.4em;
+        line-height: 130%;
+        color: $primaryColor;
+        margin-bottom: 10px;
+        @media screen and (max-device-width: 320px) {
+            font-size: 1.2em;
+        }
+    }
+    .news-text{
+        font-size: 1.1em;
+        line-height: 140%;
+        color: $grayColor;
+        text-align: justify;
+        @media screen and (max-device-width: 320px) {
+            font-size: 1em;
+        }
+    }
+    .news-date{
+        font-size: 1.1em;
+        color: $grayColor;
+        text-align: right;
+        @media screen and (max-device-width: 320px) {
+            font-size: 1em;
+        }
+    }
+}
+.chart-block{
+    margin:10px 0 20px 0;
+    .switch{
+        margin-bottom: 15px;
+    }
+    .highcart-container{
+        background: #fff;
+    }
+}
+.btn{
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 1.1em;
+    letter-spacing: .1em;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    box-sizing:border-box;
+    width: 48%;
+    margin-right: 1%;
+    @media screen and (max-width: 320px) {
+        font-size: 1em;
+    }
+    &:nth-of-type(2){
+        margin-right: 0;
+        margin-left: 1%;
+    }
+    &.btn-all{
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    &.btn-orange{
+        background: $lightColor;
+    }
+    &.btn-blue{
+        background: $primaryColor;
+    }
+    &.btn-gray{
+        background: $grayColor;
+    }
+    &:hover{
+        color: #fff;
+    }
+}
+.dialog{
+    width: 80%;
+    border-radius: 5px;
+    background: #fff;
+    z-index: 9999;
+    padding: 20px;
+    box-sizing:border-box;
+    margin: 0;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.1),-5px -5px 5px 0px rgba(0,0,0,0.1);
+    p{
+        font-size: 1.2em;
+        line-height: 160%;
+        margin-bottom: 15px;
+    }
+    .dialog-title{
+        color: $primaryColor;
+        font-size: 1.7em;
+        font-weight: normal;
+        letter-spacing: .05em;
+        padding: 10px 0 0px 14px;
+        margin: 0 0 20px 0;
+        position: relative;
+        @media screen and (max-width: 320px) {
+            font-size: 1.5em;
+            padding: 8px 0 0px 10px;
+        }
+        &:before{
+            content: "";
+            width: 5px;
+            height: 36px;
+            display: block;
+            border-radius: 5px;
+            background: #3d89bf;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @media screen and (max-width: 320px) {
+                height: 32px;
+            }
+        }
+    }
+    .menber-list{
+        font-size: 1.2em;
+        line-height: 160%;
+        margin-bottom: 15px;
+        @media screen and (max-width: 320px) {
+            font-size: 1em;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            display: block;
+            padding: 8px 0;
+            border-bottom: 2px dotted #ccc;
+            span{
+                margin-right: 8px;
+            }
+            &.active{
+                background: url(../images/check.png) right center no-repeat;
+            }
+        }
+    }
+    .alert-list{
+        font-size: 1.2em;
+        line-height: 160%;
+        margin-bottom: 15px;
+        @media screen and (max-width: 320px) {
+            font-size: 1em;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            display: block;
+            padding: 8px 0;
+            border-bottom: 2px dotted #ccc;
+            span{
+                margin-right: 8px;
+            }
+            &.active{
+                background: url(../images/check.png) right center no-repeat;
+            }
+        }
+    }
+}
+.gotop{
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: url(../images/gotop.png) 0 0 no-repeat;
+    background-size: cover;
+    opacity: .5;
+    position: fixed;
+    z-index: 9999;
+    bottom: -40px;
+    right: 15px;
+    transition:all 0.5s;
+    &.active{
+        bottom: 15px;
+    }
+    &:hover,&:focus{
+        opacity: .7;
+    }
+}
+.year-slide{
+    padding: 20px 0;
+    .slick-prev,.slick-next{
+        opacity: .3;
+    }
+    .slick-prev{
+        left: 5px!important;
+    }
+    .slick-next{
+        right: 5px!important;
+    }
+    .year{
+        height: 330px;
+        position: relative;
+        .title{
+            font-size: 1.4em;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+            margin-top: 10px;
+            &:before{
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                position: absolute;
+                left: 50%;
+                bottom: -5px;
+                margin-left: -5px;
+                background: #ccc;
+            }
+            &:after{
+                content: "";
+                width: 100%;
+                height: 1px;
+                background: #ccc;
+                display: block;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+        .book-bg{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -50px;
+            .book-number{
+                font-size: 1.3em;
+                color: $lightColor;
+                margin-bottom: 8px;
+            }
+            .over{
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+            .more{
+                width: 36px;
+                height: 36px;
+                display: block;
+                background: url(../images/more.png) 0 0 no-repeat;
+                background-size: cover;
+                float: none;
+                margin: -5px auto 5px auto;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+            }
+            li{
+                width: 100%;
+                height: 23px;
+                display: block;
+                background: url(../images/book.png) top center no-repeat;
+                text-align: center;
+                &:first-child{
+                    height: auto;
+                    background: none;
+                }
+                &:nth-child(even){
+                    height: 21px;
+                    background: url(../images/book2.png) top center no-repeat;
+                }
+            }
+        }
+    }
+}

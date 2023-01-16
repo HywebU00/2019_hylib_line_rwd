@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="robots" content="noindex">
+	<!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+	<title>06-1個人書房-閱讀指數-月</title>
+	<link rel="shortcut icon" href="images/favacon.ico"/>
+	<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/hylib-line-style.css">
+</head>
+<body>
+	<!-- 切換借閱證 -->
+	<div class="dialog" id="id-dialog">
+		<h2 class="dialog-title">切換帳號</h2>
+		<div class="menber-list">
+			<ul>
+				<li class="active">
+					<span class="menber-name">張*大</span>
+					<span class="menber-id">A222***222</span>
+				</li>
+				<li>
+					<span class="menber-name">張*大</span>
+					<span class="menber-id">A222***222</span>
+				</li>
+			</ul>
+		</div>
+		<div class="btn btn-all btn-gray dialog-close">關閉</div>
+	</div>
+	<!-- 切換借閱證 -->
+	<div class="dialog" id="alert-dialog">
+		<h2 class="dialog-title">通知時間設定</h2>
+		<div class="alert-list">
+			<ul>
+				<li class="active">早上 9 AM</li>
+				<li>中午 12 PM</li>
+				<li>下午 15 PM</li>
+				<li>晚間 18 PM</li>
+				<li>不接收通知</li>
+			</ul>
+		</div>
+		<div class="btn btn-all btn-gray dialog-close">確認</div>
+	</div>
+	<!-- overlay 黑色遮罩 -->
+	<div class='overlay'></div>
+	<div class="wrap">
+		<header>
+			<div class="menber-info">
+				<div class="menber-name">張*大</div>
+				<div class="menber-id">M111***111</div>
+			</div>
+			<div class="nav-function">
+				<span class="home"><a href="03-1館藏查詢.html"></a></span>
+				<span class="alert-time"></span>
+				<span class="chart"><a href="06-4個人書房-閱讀指數-月.html"></a></span>
+				<span class="switch-menber"></span>
+			</div>
+			<div class="menber-function">
+				<a href="06-1個人書房-借閱.html">借閱<em>5</em></a>
+				<a href="06-2個人書房-預約.html">預約<em>5</em></a>
+				<a href="06-3個人書房-借閱證管理.html">借閱證管理</a>
+			</div>
+			<div class="search-box">
+				<select name="" id="" class="select">
+					<option value="">題名</option>
+					<option value="">作者</option>
+					<option value="">ISBN</option>
+					<option value="">主題</option>
+				</select>
+				<select name="" id="" class="select">
+					<option value="">館藏地</option>
+					<option value="">館藏地</option>
+					<option value="">館藏地</option>
+					<option value="">館藏地</option>
+				</select>
+				<input type="text" placeholder="請輸入查詢詞" class="input">
+			</div>
+		</header>
+		<div class="content library">
+			<h2 class="main-title">閱讀指數</h2>
+			<div class="chart-block">
+				<div class="switch">
+					<a href="06-4個人書房-閱讀指數-月.html" class="btn btn-orange">月</a>
+					<a href="06-4個人書房-閱讀指數-年.html" class="btn btn-gray">年</a>
+				</div>
+				<div id="highcart-container" class="highcart-container"></div>
+			</div>
+			<h2 class="main-title">2018年12月</h2>
+			<div class="book-gallery">
+				<div class="book">
+					<div class="cover">
+						<a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+					</div>
+					<div class="title">
+						<a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+					</div>
+					<dl class="date">
+						<dt>借書日：</dt>
+						<dd>2018-12-31</dd>
+						<dt>還書日：</dt>
+						<dd>2018-12-31</dd>
+					</dl>
+				</div>
+				<div class="book">
+					<div class="cover">
+						<a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+					</div>
+					<div class="title">
+						<a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+					</div>
+					<dl class="date">
+						<dt>借書日：</dt>
+						<dd>2018-12-31</dd>
+						<dt>還書日：</dt>
+						<dd>2018-12-31</dd>
+					</dl>
+				</div>
+				<div class="book">
+					<div class="cover">
+						<a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+					</div>
+					<div class="title">
+						<a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+					</div>
+					<dl class="date">
+						<dt>借書日：</dt>
+						<dd>2018-12-31</dd>
+						<dt>還書日：</dt>
+						<dd>2018-12-31</dd>
+					</dl>
+				</div>
+				<div class="book">
+					<div class="cover">
+						<a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+					</div>
+					<div class="title">
+						<a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+					</div>
+					<dl class="date">
+						<dt>借書日：</dt>
+						<dd>2018-12-31</dd>
+						<dt>還書日：</dt>
+						<dd>2018-12-31</dd>
+					</dl>
+				</div>
+				<div class="book">
+					<div class="cover">
+						<a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+					</div>
+					<div class="title">
+						<a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+					</div>
+					<dl class="date">
+						<dt>借書日：</dt>
+						<dd>2018-12-31</dd>
+						<dt>還書日：</dt>
+						<dd>2018-12-31</dd>
+					</dl>
+				</div>
+				<div class="book">
+					<div class="cover">
+						<a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+					</div>
+					<div class="title">
+						<a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+					</div>
+					<dl class="date">
+						<dt>借書日：</dt>
+						<dd>2018-12-31</dd>
+						<dt>還書日：</dt>
+						<dd>2018-12-31</dd>
+					</dl>
+				</div>
+				<div class="book">
+					<div class="cover">
+						<a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+					</div>
+					<div class="title">
+						<a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+					</div>
+					<dl class="date">
+						<dt>借書日：</dt>
+						<dd>2018-12-31</dd>
+						<dt>還書日：</dt>
+						<dd>2018-12-31</dd>
+					</dl>
+				</div>
+				<div class="book">
+					<div class="cover">
+						<a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+					</div>
+					<div class="title">
+						<a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+					</div>
+					<dl class="date">
+						<dt>借書日：</dt>
+						<dd>2018-12-31</dd>
+						<dt>還書日：</dt>
+						<dd>2018-12-31</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<a class="gotop" id="gotop"></a>
+	</div>
+	<script src="js/jquery.1.12.4.min.js"></script>
+	<script src="js/slick/slick.js"></script>
+	<script src="js/hylib.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script>
+		Highcharts.chart('highcart-container', {
+			chart: {
+				type: 'line'
+			},
+			title: {
+				text: null
+			},
+			xAxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+			},
+			yAxis: {
+				title: {
+					text: null
+				}
+			},
+			exporting: {
+				enabled: false
+			},
+			plotOptions: {
+				line: {
+					dataLabels: {
+						enabled: true
+					},
+					enableMouseTracking: false
+				}
+			},
+			series: [{
+				name: '2018年',
+				data: [5, 6, 8, 6, 1, 8, 7, 4, 5, 7, 6, 10],
+				color: '#3d89bf',
+				stack: 'participants'
+			}, {
+				name: '2017年',
+				data: [5, 4, 3, 8, 5, 3, 1, 2, 4, 3, 6, 4],
+				color: '#999',
+				stack: 'participants'
+			}]
+		});
+	</script>
+</body>
+</html>
